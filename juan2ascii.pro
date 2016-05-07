@@ -10,23 +10,7 @@ SOURCES += main.cpp \
     asciiconverter.cpp \
     stopwatch.cpp
 
-LIBS += /usr/local/lib/libopencv_calib3d.so
-LIBS += /usr/local/lib/libopencv_core.so
-LIBS += /usr/local/lib/libopencv_features2d.so
-LIBS += /usr/local/lib/libopencv_flann.so
-LIBS += /usr/local/lib/libopencv_highgui.so
-LIBS += /usr/local/lib/libopencv_imgcodecs.so
-LIBS += /usr/local/lib/libopencv_imgproc.so
-LIBS += /usr/local/lib/libopencv_ml.so
-LIBS += /usr/local/lib/libopencv_objdetect.so
-LIBS += /usr/local/lib/libopencv_photo.so
-LIBS += /usr/local/lib/libopencv_shape.so
-LIBS += /usr/local/lib/libopencv_stitching.so
-LIBS += /usr/local/lib/libopencv_superres.so
-LIBS += /usr/local/lib/libopencv_ts.a
-LIBS += /usr/local/lib/libopencv_video.so
-LIBS += /usr/local/lib/libopencv_videoio.so
-LIBS += /usr/local/lib/libopencv_videostab.so
+LIBS += -L/usr/local/lib -lopencv_shape -lopencv_stitching -lopencv_objdetect -lopencv_superres -lopencv_videostab -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_imgcodecs -lopencv_video -lopencv_photo -lopencv_ml -lopencv_imgproc -lopencv_flann -lopencv_core
 
 HEADERS += \
     edge_detection.h \

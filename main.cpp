@@ -19,8 +19,10 @@ int main(int argc, char* argv[]) {
     }
 
     cv::Mat img = cv::imread(argv[1], CV_LOAD_IMAGE_GRAYSCALE);
-    if (!img.data)
+    if (!img.data){
+        std::cout << "[ERROR]: loading image" << std::endl;
         return 0;
+    }
 
     int rows = 0;
     int cols = 0;
